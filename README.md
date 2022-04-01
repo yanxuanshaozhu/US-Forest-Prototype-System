@@ -10,8 +10,8 @@ This is a database management course project. It's a web application that allows
 
 ---
 
-Front end: a web application built on Plotly Dash, deployed to Heroku; Bootstrap
-Back end: web servers built on Spring Boot, deployed to Heroku
+Front end: a web application built on Plotly Dash, deployed to Heroku; Bootstrap<br>
+Back end: web servers built on Spring Boot, deployed to Heroku<br>
 Database: PostgreSQL, based on Heroku Postgres
 
 ## Run this project on Heroku(recommended)
