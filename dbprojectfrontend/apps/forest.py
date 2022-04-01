@@ -202,7 +202,7 @@ def add_forest(clicks, name, area, area_invalid, acid_level, acid_level_invalid,
                                                      page_size=10)
         if res == 1:
             return html.Div(children=[
-                dbc.Alert('Info: insertion is successful!', color='success', style={'width': '30%'}),
+                dbc.Alert(f'Info: insertion of {name} is successful!', color='success', style={'width': '40%'}),
                 new_forest_dash_table
             ])
         elif res == -1:

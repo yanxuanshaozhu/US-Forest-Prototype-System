@@ -188,8 +188,8 @@ def add(click, sensor_id, sensor_id_invalid, x, x_invalid, y, y_invalid, last_ch
                                                      page_size=8)
         if res == 1:
             return html.Div(children=[
-                dbc.Alert('Info: insertion is successful!', color='success',
-                          style={'width': '30%'}),
+                dbc.Alert(f'Info: insertion of sensor {sensor_id} at ({x}, {y}) is successful!', color='success',
+                          style={'width': '40%'}),
                 new_sensor_dash_table
             ])
         elif res == -1:
@@ -254,7 +254,7 @@ def update(click, x_update, x_update_invalid, y_update, y_update_invalid, energy
                                                      page_size=8)
         if res == 2:
             return html.Div(children=[
-                dbc.Alert('Info: update is successful! High temperature alert!', color='danger',
+                dbc.Alert('Info: update is successful! High temperature emergency alert!', color='danger',
                           style={'width': '40%'}),
                 new_sensor_dash_table
             ])

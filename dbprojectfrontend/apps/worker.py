@@ -119,8 +119,8 @@ def add_worker(clicks, ssn, ssn_invalid, name, rank, rank_invalid, employing_sta
                                                      page_size=10)
         if res == 1:
             return html.Div(children=[
-                dbc.Alert('Info: insertion is successful!', color='success',
-                          style={'width': '30%'}),
+                dbc.Alert(f'Info: insertion of {name} is successful!', color='success',
+                          style={'width': '40%'}),
                 new_worker_dash_table
             ])
         elif res == -1:
@@ -153,7 +153,7 @@ def switch_duty(click, name1, name2):
         dt = {"name1": name1, "name2": name2}
         res = requests.post(url, json=dt).json()
         if res == -1:
-            return dbc.Alert('Error: two worker names are the same',
+            return dbc.Alert('Error: two worker names are the same', color='danger',
                              style={'width': '40%'})
         elif res == -2:
             return dbc.Alert('Error: the first worker name is not in the database', color='danger',
@@ -191,7 +191,9 @@ def display_topk(click, k, k_invalid):
         topk_dash_table = dash_table.DataTable(topk_table.to_dict('records'),
                                                [{"name": i, "id": i} for i in
                                                 topk_table.columns], page_size=10)
-        return html.Div(children=topk_dash_table, style={'width': '30%'})
+        if len(topk_data) == 0:
+            return dbc.Alert('Info: there are no busy workers!', color='success', style={'width': '40%'})
+        return html.Div(topk_dash_table, style={'width': '30%'})
 
 
 @app.callback(Output('ssn', 'invalid'),
