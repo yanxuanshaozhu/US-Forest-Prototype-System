@@ -1,0 +1,6 @@
+dash~=2.3.0
+requests~=2.27.1
+pandas~=1.4.1
+dash-extensions~=0.0.71
+dash-bootstrap-components~=1.0.3
+gunicorn~=20.1.0
