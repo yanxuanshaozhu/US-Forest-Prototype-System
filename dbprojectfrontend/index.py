@@ -26,7 +26,23 @@ index_layout = html.Div([
             dbc.NavItem(dbc.NavLink("State Page", href='/state')),
             dbc.NavItem(dbc.NavLink("Sensor Page", href='/sensor')),
             dbc.NavItem(dbc.NavLink("Report Page", href="/report")),
-        ]
+        ],
+        style={'marginLeft': '19%'}
+    ),
+    html.H2("Main menu", style={'textAlign': 'center'}),
+    dbc.ListGroup(
+        [
+            dbc.ListGroupItem("1. Add Forest on Forest Page"),
+            dbc.ListGroupItem("2. Add Worker on Worker Page"),
+            dbc.ListGroupItem("3. Add Sensor on Sensor Page"),
+            dbc.ListGroupItem("4. Switch Workers Duties on Worker Page"),
+            dbc.ListGroupItem("5. Update Sensor Statues on Sensor Page"),
+            dbc.ListGroupItem("6. Update Forest Covered Area on Forest Page"),
+            dbc.ListGroupItem("7. Find Top-k Busy Workers on Worker Page"),
+            dbc.ListGroupItem("8. Add Sensor on Sensor Page"),
+            dbc.ListGroupItem("9. Add State on State Page"),
+        ],
+        style={'textAlign': 'center', 'width': '50%', 'marginLeft': '25%'}
     )
 ])
 
@@ -51,4 +67,4 @@ def display_page(pathname):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=False, dev_tools_props_check=False)
+    app.run_server(debug=True, dev_tools_props_check=False)
