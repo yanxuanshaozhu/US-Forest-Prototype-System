@@ -1,4 +1,4 @@
-<h1>US Forest System</h1>
+<h1 style="text-align:center;">US Forest System</h1>
 
 ## Description
 
