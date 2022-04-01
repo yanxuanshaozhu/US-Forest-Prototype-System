@@ -165,7 +165,7 @@ def switch_duty(click, name1, name2):
             return dbc.Alert('Error: both worker names are not in the database', color='danger',
                              style={'width': '40%'})
         elif res == -5:
-            return dbc.Alert('Error: workers work in different states, canot switch duties!', color='danger',
+            return dbc.Alert('Error: workers work in different states, cannot switch duties!', color='danger',
                              style={'width': '40%'})
         elif res == 1:
             return dbc.Alert('Info: duty switch is successful!', color='success',
